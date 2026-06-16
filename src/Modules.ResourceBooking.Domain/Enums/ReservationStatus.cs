@@ -1,4 +1,4 @@
-﻿namespace ResourceBooking.Domain.Enums;
+﻿namespace Modules.ResourceBooking.Domain.Enums;
 
 public enum ReservationStatus
 {

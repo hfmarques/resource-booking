@@ -1,6 +1,6 @@
-﻿using ResourceBooking.Domain.Enums;
+﻿using Modules.ResourceBooking.Domain.Enums;
 
-namespace ResourceBooking.Domain.Entities;
+namespace Modules.ResourceBooking.Domain.Entities;
 
 public class Resource
 {
@@ -9,5 +9,5 @@ public class Resource
     public string Description { get; set; } = string.Empty;
     public ResourceType Type { get; set; }
     public bool IsAvailable { get; set; }
-    public List<Reservation> Reservations = [];
+    public List<Reservation> Reservations { get; private set; } = [];
 }

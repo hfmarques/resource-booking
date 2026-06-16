@@ -1,4 +1,4 @@
-﻿namespace ResourceBooking.Domain.Entities;
+﻿namespace Modules.ResourceBooking.Domain.Entities;
 
 public class User
 {
@@ -7,5 +7,5 @@ public class User
     public string LastName { get; private set; } = string.Empty;
     public string Email { get; private set; } = string.Empty;
     public bool IsActive { get; private set; }
-    public List<Reservation> Reservations = [];
+    public List<Reservation> Reservations { get; private set; } = [];
 }

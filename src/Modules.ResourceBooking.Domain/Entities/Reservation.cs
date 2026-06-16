@@ -1,6 +1,6 @@
-﻿using ResourceBooking.Domain.Enums;
+﻿using Modules.ResourceBooking.Domain.Enums;
 
-namespace ResourceBooking.Domain.Entities;
+namespace Modules.ResourceBooking.Domain.Entities;
 
 public class Reservation
 {
