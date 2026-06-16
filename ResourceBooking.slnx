@@ -1,2 +1,3 @@
 <Solution>
+  <Project Path="src/ResourceBooking.Domain/ResourceBooking.Domain.csproj" />
 </Solution>
