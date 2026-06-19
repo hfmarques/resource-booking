@@ -1,3 +1,8 @@
 <Solution>
+  <Project Path="src/Modules.Common.Domain/Modules.Common.Domain.csproj" />
+  <Project Path="src/Modules.ResourceBooking.Core/Modules.ResourceBooking.Core.csproj" />
   <Project Path="src/Modules.ResourceBooking.Domain/Modules.ResourceBooking.Domain.csproj" />
+  <Project Path="src/Modules.ResourceBooking.Infrastructure/Modules.ResourceBooking.Infrastructure.csproj" />
+  <Project Path="src/Modules.ResourceBooking.PublicApi/Modules.ResourceBooking.PublicApi.csproj" />
 </Solution>
+
