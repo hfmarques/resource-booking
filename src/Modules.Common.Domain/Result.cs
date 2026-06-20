@@ -1,30 +1,26 @@
 namespace Modules.Common.Domain;
 
-public class Result
+public class Result<T>
 {
     public bool IsSuccess { get; }
     public bool IsFailure => !IsSuccess;
-    public string Error { get; }
+    public T? Value { get; }
+    public string? Error { get; }
 
-    protected Result(bool isSuccess, string error)
+    private Result(bool isSuccess, T? value, string? error)
     {
         IsSuccess = isSuccess;
+        Value = value;
         Error = error;
     }
 
-    public static Result Success() => new(true, string.Empty);
-    public static Result Failure(string error) => new(false, error);
-}
-
-public class Result<T> : Result
-{
-    public T Value { get; }
-
-    private Result(bool isSuccess, T value, string error) : base(isSuccess, error)
+    public static Result<T> Success(T value)
     {
-        Value = value;
+        return new Result<T>(true, value, null);
     }
 
-    public static Result<T> Success(T value) => new(true, value, string.Empty);
-    public new static Result<T> Failure(string error) => new(false, default!, error);
+    public static Result<T> Failure(string error)
+    {
+        return new Result<T>(false, default(T), error);
+    }
 }
