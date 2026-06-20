@@ -1,5 +1,4 @@
 using FluentValidation;
-using Modules.ResourceBooking.Core.Features.CreateReservation;
 
 namespace Modules.ResourceBooking.Core.Features.CreateReservation;
 

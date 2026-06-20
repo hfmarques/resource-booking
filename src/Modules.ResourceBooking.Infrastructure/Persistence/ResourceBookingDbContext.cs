@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Modules.ResourceBooking.Domain.Entities;
-using Modules.ResourceBooking.Infrastructure.Persistence.Configurations;
 
 namespace Modules.ResourceBooking.Infrastructure.Persistence;
 
