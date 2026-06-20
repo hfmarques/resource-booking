@@ -45,6 +45,10 @@ app.MapDefaultEndpoints();
 
 app.MapOpenApi();
 app.MapScalarApiReference();
+if (app.Environment.IsDevelopment())
+{
+    app.Map("/", () => Results.Redirect("/scalar"));
+}
 
 app.UseSerilogRequestLogging();
 app.UseAuthentication();
