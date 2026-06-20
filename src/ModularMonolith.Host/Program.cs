@@ -34,6 +34,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 builder.Services.AddAuthorization();
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.SetIsOriginAllowed(origin => new Uri(origin).Host == "localhost")
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddOpenApi();
 
 builder.AddNpgsqlDbContext<ResourceBookingDbContext>("resourcebooking");
@@ -51,6 +61,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseSerilogRequestLogging();
+app.UseCors();
 app.UseAuthentication();
 app.UseAuthorization();
 
