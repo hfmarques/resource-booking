@@ -3,13 +3,8 @@ using Modules.ResourceBooking.Domain.Entities;
 
 namespace Modules.ResourceBooking.Infrastructure.Persistence;
 
-public class ResourceBookingDbContext : DbContext
+public class ResourceBookingDbContext(DbContextOptions<ResourceBookingDbContext> options) : DbContext(options)
 {
-    public ResourceBookingDbContext(DbContextOptions<ResourceBookingDbContext> options)
-        : base(options)
-    {
-    }
-
     public DbSet<User> Users => Set<User>();
     public DbSet<Resource> Resources => Set<Resource>();
     public DbSet<Reservation> Reservations => Set<Reservation>();
