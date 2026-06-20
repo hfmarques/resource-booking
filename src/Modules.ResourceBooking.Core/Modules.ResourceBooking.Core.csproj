@@ -19,6 +19,7 @@
     <ItemGroup>
         <ProjectReference Include="..\Modules.ResourceBooking.Domain\Modules.ResourceBooking.Domain.csproj" />
         <ProjectReference Include="..\Modules.Common.Domain\Modules.Common.Domain.csproj" />
+        <ProjectReference Include="..\Modules.Common.API\Modules.Common.API.csproj" />
         <ProjectReference Include="..\Modules.ResourceBooking.Infrastructure\Modules.ResourceBooking.Infrastructure.csproj" />
     </ItemGroup>
 
