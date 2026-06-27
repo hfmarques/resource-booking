@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="src/ModularMonolith.AppHost/ModularMonolith.AppHost.csproj" />
   <Project Path="src/ModularMonolith.Host/ModularMonolith.Host.csproj" />
   <Project Path="src/Modules.Common.API/Modules.Common.API.csproj" />
   <Project Path="src/Modules.Common.Domain/Modules.Common.Domain.csproj" />
@@ -6,6 +7,5 @@
   <Project Path="src/Modules.ResourceBooking.Domain/Modules.ResourceBooking.Domain.csproj" />
   <Project Path="src/Modules.ResourceBooking.Infrastructure/Modules.ResourceBooking.Infrastructure.csproj" />
   <Project Path="src/Modules.ResourceBooking.PublicApi/Modules.ResourceBooking.PublicApi.csproj" />
-  <Project Path="src/ResourceBooking.AppHost/ResourceBooking.AppHost.csproj" />
   <Project Path="src/ResourceBooking.ServiceDefaults/ResourceBooking.ServiceDefaults.csproj" />
 </Solution>
