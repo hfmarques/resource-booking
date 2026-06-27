@@ -6,6 +6,7 @@ using Modules.ResourceBooking.Infrastructure.Persistence;
 using Scalar.AspNetCore;
 using Serilog;
 using System.Text;
+using Modules.Common.API.GlobalException;
 using ResourceBooking.ServiceDefaults;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -49,7 +50,11 @@ builder.Services.AddOpenApi();
 builder.AddNpgsqlDbContext<ResourceBookingDbContext>("resourcebooking");
 builder.Services.AddResourceBookingModule(builder.Configuration);
 
+builder.Services.AddCommonApi();
+
 var app = builder.Build();
+
+app.UseExceptionHandler();
 
 app.MapDefaultEndpoints();
 
