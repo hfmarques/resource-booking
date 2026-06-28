@@ -8,4 +8,5 @@
   <Project Path="src/Modules.ResourceBooking.Infrastructure/Modules.ResourceBooking.Infrastructure.csproj" />
   <Project Path="src/Modules.ResourceBooking.PublicApi/Modules.ResourceBooking.PublicApi.csproj" />
   <Project Path="src/ResourceBooking.ServiceDefaults/ResourceBooking.ServiceDefaults.csproj" />
+  <Project Path="test/ModularMonolith.AppHost.Tests/ModularMonolith.AppHost.Tests.csproj" />
 </Solution>
